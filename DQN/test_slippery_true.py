@@ -1,8 +1,5 @@
 import gymnasium as gym
-import numpy as np
 import matplotlib.pyplot as plt
-from collections import deque
-import random
 import torch
 from torch import nn
 import torch.nn.functional as F
@@ -25,7 +22,7 @@ def state_to_input(state, num_states):
 
 # Testing
 def test_model(episodes=20, model_path="frozenlake_slippery_true.pt"):
-    env = gym.make('FrozenLake8x8-v1', is_slippery=True, render_mode='human')
+    env = gym.make('FrozenLake8x8-v1', is_slippery=True)
     num_states = env.observation_space.n
     num_actions = env.action_space.n
     

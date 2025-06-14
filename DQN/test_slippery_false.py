@@ -25,7 +25,7 @@ def state_to_input(state, num_states):
 
 # Testing
 def test_model(episodes=20, model_path="frozenlake_slippery_false.pt"):
-    env = gym.make('FrozenLake8x8-v1', is_slippery=False, render_mode='human')
+    env = gym.make('FrozenLake8x8-v1', is_slippery=False)
     num_states = env.observation_space.n
     num_actions = env.action_space.n
     
