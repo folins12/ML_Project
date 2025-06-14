@@ -630,3 +630,113 @@ Episode 10000, Epsilon: 0.010, Success Rate: 0.81
 
 --- TESTING on 8x8, slippery=True ---
 Success Rate: 87.30%
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+
+--- TRAINING on 8x8, slippery=True ---
+Episode 100, Epsilon: 0.932, Success Rate: 0.01
+Episode 200, Epsilon: 0.869, Success Rate: 0.01
+Episode 300, Epsilon: 0.811, Success Rate: 0.00
+Episode 400, Epsilon: 0.756, Success Rate: 0.01
+Episode 500, Epsilon: 0.705, Success Rate: 0.01
+Episode 600, Epsilon: 0.657, Success Rate: 0.01
+Episode 700, Epsilon: 0.613, Success Rate: 0.00
+Episode 800, Epsilon: 0.571, Success Rate: 0.00
+Episode 900, Epsilon: 0.532, Success Rate: 0.01
+Episode 1000, Epsilon: 0.496, Success Rate: 0.03
+Episode 1100, Epsilon: 0.463, Success Rate: 0.02
+Episode 1200, Epsilon: 0.432, Success Rate: 0.02
+Episode 1300, Epsilon: 0.402, Success Rate: 0.04
+Episode 1400, Epsilon: 0.375, Success Rate: 0.06
+Episode 1500, Epsilon: 0.350, Success Rate: 0.11
+Episode 1600, Epsilon: 0.326, Success Rate: 0.13
+Episode 1700, Epsilon: 0.304, Success Rate: 0.19
+Episode 1800, Epsilon: 0.284, Success Rate: 0.17
+Episode 1900, Epsilon: 0.264, Success Rate: 0.25
+Episode 2000, Epsilon: 0.246, Success Rate: 0.27
+Episode 2100, Epsilon: 0.230, Success Rate: 0.25
+Episode 2200, Epsilon: 0.214, Success Rate: 0.30
+Episode 2300, Epsilon: 0.200, Success Rate: 0.24
+Episode 2400, Epsilon: 0.186, Success Rate: 0.30
+Episode 2500, Epsilon: 0.174, Success Rate: 0.35
+Episode 2600, Epsilon: 0.162, Success Rate: 0.36
+Episode 2700, Epsilon: 0.151, Success Rate: 0.38
+Episode 2800, Epsilon: 0.141, Success Rate: 0.31
+Episode 2900, Epsilon: 0.131, Success Rate: 0.37
+Episode 3000, Epsilon: 0.122, Success Rate: 0.39
+Episode 3100, Epsilon: 0.114, Success Rate: 0.44
+Episode 3200, Epsilon: 0.106, Success Rate: 0.42
+Episode 3300, Epsilon: 0.099, Success Rate: 0.47
+Episode 3400, Epsilon: 0.092, Success Rate: 0.49
+Episode 3500, Epsilon: 0.086, Success Rate: 0.55
+Episode 3600, Epsilon: 0.080, Success Rate: 0.60
+Episode 3700, Epsilon: 0.075, Success Rate: 0.54
+Episode 3800, Epsilon: 0.070, Success Rate: 0.57
+Episode 3900, Epsilon: 0.065, Success Rate: 0.58
+Episode 4000, Epsilon: 0.061, Success Rate: 0.44
+Episode 4100, Epsilon: 0.057, Success Rate: 0.60
+Episode 4200, Epsilon: 0.053, Success Rate: 0.53
+Episode 4300, Epsilon: 0.049, Success Rate: 0.48
+Episode 4400, Epsilon: 0.046, Success Rate: 0.58
+Episode 4500, Epsilon: 0.043, Success Rate: 0.62
+Episode 4600, Epsilon: 0.040, Success Rate: 0.63
+Episode 4700, Epsilon: 0.037, Success Rate: 0.61
+Episode 4800, Epsilon: 0.035, Success Rate: 0.62
+Episode 4900, Epsilon: 0.032, Success Rate: 0.73
+Episode 5000, Epsilon: 0.030, Success Rate: 0.71
+Episode 5100, Epsilon: 0.028, Success Rate: 0.68
+Episode 5200, Epsilon: 0.026, Success Rate: 0.62
+Episode 5300, Epsilon: 0.024, Success Rate: 0.73
+Episode 5400, Epsilon: 0.023, Success Rate: 0.67
+Episode 5500, Epsilon: 0.021, Success Rate: 0.61
+Episode 5600, Epsilon: 0.020, Success Rate: 0.73
+Episode 5700, Epsilon: 0.018, Success Rate: 0.80
+Episode 5800, Epsilon: 0.017, Success Rate: 0.84
+Episode 5900, Epsilon: 0.016, Success Rate: 0.78
+Episode 6000, Epsilon: 0.015, Success Rate: 0.70
+Episode 6100, Epsilon: 0.014, Success Rate: 0.82
+Episode 6200, Epsilon: 0.013, Success Rate: 0.74
+Episode 6300, Epsilon: 0.012, Success Rate: 0.74
+Episode 6400, Epsilon: 0.011, Success Rate: 0.83
+Episode 6500, Epsilon: 0.011, Success Rate: 0.81
+Episode 6600, Epsilon: 0.010, Success Rate: 0.77
+Episode 6700, Epsilon: 0.010, Success Rate: 0.81
+Episode 6800, Epsilon: 0.010, Success Rate: 0.82
+Episode 6900, Epsilon: 0.010, Success Rate: 0.77
+Episode 7000, Epsilon: 0.010, Success Rate: 0.78
+Episode 7100, Epsilon: 0.010, Success Rate: 0.79
+Episode 7200, Epsilon: 0.010, Success Rate: 0.71
+Episode 7300, Epsilon: 0.010, Success Rate: 0.81
+Episode 7400, Epsilon: 0.010, Success Rate: 0.71
+Episode 7500, Epsilon: 0.010, Success Rate: 0.71
+Episode 7600, Epsilon: 0.010, Success Rate: 0.81
+Episode 7700, Epsilon: 0.010, Success Rate: 0.77
+Episode 7800, Epsilon: 0.010, Success Rate: 0.88
+Episode 7900, Epsilon: 0.010, Success Rate: 0.82
+Episode 8000, Epsilon: 0.010, Success Rate: 0.75
+Episode 8100, Epsilon: 0.010, Success Rate: 0.80
+Episode 8200, Epsilon: 0.010, Success Rate: 0.80
+Episode 8300, Epsilon: 0.010, Success Rate: 0.84
+Episode 8400, Epsilon: 0.010, Success Rate: 0.79
+Episode 8500, Epsilon: 0.010, Success Rate: 0.78
+Episode 8600, Epsilon: 0.010, Success Rate: 0.72
+Episode 8700, Epsilon: 0.010, Success Rate: 0.82
+Episode 8800, Epsilon: 0.010, Success Rate: 0.84
+Episode 8900, Epsilon: 0.010, Success Rate: 0.80
+Episode 9000, Epsilon: 0.010, Success Rate: 0.84
+Episode 9100, Epsilon: 0.010, Success Rate: 0.84
+Episode 9200, Epsilon: 0.010, Success Rate: 0.71
+Episode 9300, Epsilon: 0.010, Success Rate: 0.74
+Episode 9400, Epsilon: 0.010, Success Rate: 0.75
+Episode 9500, Epsilon: 0.010, Success Rate: 0.71
+Episode 9600, Epsilon: 0.010, Success Rate: 0.74
+Episode 9700, Epsilon: 0.010, Success Rate: 0.85
+Episode 9800, Epsilon: 0.010, Success Rate: 0.76
+Episode 9900, Epsilon: 0.010, Success Rate: 0.69
+Episode 10000, Epsilon: 0.010, Success Rate: 0.76
+
+--- TESTING on 8x8, slippery=True ---
+Success Rate: 88.00%

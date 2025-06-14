@@ -10,7 +10,7 @@ params_slippery = {
     "mini_batch_size": 256,
     "epsilon_start": 1.0,
     "epsilon_min": 0.01, 
-    "epsilon_decay": 0.999, 
+    "epsilon_decay": 0.9993, 
     "episodes": 10000,
     "hidden_nodes": 128,
     "test_ep_slippery": 2000
