@@ -2,6 +2,7 @@ import matplotlib.pyplot as plt
 import gymnasium as gym
 from agent import QLearningAgent
 from config import AGENT_PARAMS
+from map_plot import plot_q_table
 
 def train(map_name, is_slippery, episodes):
     env = gym.make('FrozenLake-v1', map_name=map_name, is_slippery=is_slippery)
@@ -65,6 +66,10 @@ def train(map_name, is_slippery, episodes):
     epsilon_plot_filename = f"epsilon_decay_{map_name}_{'slippery' if is_slippery else 'deterministic'}.png"
     plt.savefig(epsilon_plot_filename)
     plt.close()
+
+    # Plot Q table
+    plot_q_table(env, agent.q_table, map_name, is_slippery)
+
 
     # Save Q-table
     q_file = f"q_{map_name}_{'slippery' if is_slippery else 'deterministic'}.pkl"
