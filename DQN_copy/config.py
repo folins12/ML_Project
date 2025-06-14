@@ -1,4 +1,4 @@
-USE_SLIPPERY = False  
+USE_SLIPPERY = True  
 
 MAP_NAME = '8x8'
 
@@ -10,8 +10,8 @@ params_slippery = {
     "mini_batch_size": 256,
     "epsilon_start": 1.0,
     "epsilon_min": 0.1,
-    "epsilon_decay": 0.99995,
-    "episodes": 20000,
+    "epsilon_decay": 0.999757,
+    "episodes": 10000,
     "hidden_nodes": 128,
     "test_ep_slippery": 2000
 }
