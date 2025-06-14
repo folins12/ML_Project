@@ -8,15 +8,15 @@ from torch import nn
 import torch.nn.functional as F
 
 # Hyperparameters for slippery=True
-learning_rate = 0.001
-discount_factor = 0.9
-network_sync_rate = 500
-replay_memory_size = 10000
-mini_batch_size = 128
+learning_rate = 0.0003
+discount_factor = 0.99 
+network_sync_rate = 1000
+replay_memory_size = 50000
+mini_batch_size = 256
 epsilon_start = 1.0
-epsilon_min = 0.01
-epsilon_decay = 0.9995
-episodes = 5000
+epsilon_min = 0.1
+epsilon_decay = 0.99995  
+episodes = 20000
 hidden_nodes = 128
 
 # DQN Model
@@ -87,7 +87,7 @@ target_net.load_state_dict(policy_net.state_dict())
 
 memory = ReplayMemory(replay_memory_size)
 optimizer = torch.optim.Adam(policy_net.parameters(), lr=learning_rate)
-loss_fn = nn.MSELoss()
+loss_fn = nn.SmoothL1Loss()
 
 epsilon = epsilon_start
 rewards = np.zeros(episodes)
@@ -116,8 +116,8 @@ for episode in range(episodes):
     # Training
     optimize(policy_net, target_net, memory, optimizer, loss_fn, mini_batch_size, discount_factor)
     
-    # Linear epsilon decay
-    epsilon = max(epsilon_min, epsilon - (epsilon_start - epsilon_min)/episodes)
+    #epsilon = max(epsilon_min, epsilon * epsilon_decay) # exponential decay
+    epsilon = max(epsilon_min, epsilon - (epsilon_start - epsilon_min)/episodes) # linear decay
     epsilon_history.append(epsilon)
     
     # Sync networks
