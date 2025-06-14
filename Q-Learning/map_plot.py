@@ -1,11 +1,9 @@
-# map_plot.py
-
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.colors as mcolors
 
 def plot_frozenlake_map(env, filename="frozenlake_map.png"):
-    desc = env.unwrapped.desc.astype('U1')  # decode bytes to unicode strings
+    desc = env.unwrapped.desc.astype('U1')
     nrow, ncol = desc.shape
 
     color_map = {
@@ -38,4 +36,3 @@ def plot_frozenlake_map(env, filename="frozenlake_map.png"):
 
     plt.savefig(filename)
     plt.close()
-    print(f"Map plot saved as '{filename}'")
