@@ -8,7 +8,7 @@ AGENT_PARAMS = {
     "alpha_end": 0.1,
     "gamma": 0.9,
     "epsilon": 1.0,
-    "epsilon_min": 0.0,
+    "epsilon_min": 0.01,
     "epsilon_decay": 0.00003    # Linear Decay
     #"epsilon_decay": 0.99995   # Exponential Decay
 }
