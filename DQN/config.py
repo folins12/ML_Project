@@ -1,35 +1,20 @@
-USE_SLIPPERY = True  
+USE_SLIPPERY = False  
 
 MAP_NAME = '8x8'
 
-#params_slippery = {
-#    "learning_rate": 0.0003,
-#    "discount_factor": 0.99,
-#    "network_sync_rate": 1000,
-#    "replay_memory_size": 75000,
-#    "mini_batch_size": 256,
-#    "epsilon_start": 1.0,
-#    "epsilon_min": 0.01, 
-#    "epsilon_decay": 0.9993, 
-#    "episodes": 10000,
-#    "hidden_nodes": 128,
-#    "test_ep_slippery": 2000
-#}
-
 params_slippery = {
-    "learning_rate": 0.0015,          # faster learning
-    "discount_factor": 0.98,          # keep high for long-term planning
-    "network_sync_rate": 1000,        # keep same or reduce slightly
-    "replay_memory_size": 50000,      # smaller but still decent replay memory
-    "mini_batch_size": 256,           # keep for stability
+    "learning_rate": 0.0003,
+    "discount_factor": 0.99,
+    "network_sync_rate": 1000,
+    "replay_memory_size": 75000,
+    "mini_batch_size": 256,
     "epsilon_start": 1.0,
-    "epsilon_min": 0.01,
-    "epsilon_decay": 0.9989,            # faster epsilon decay
-    "episodes": 4000,                 # fewer episodes than original 10k
+    "epsilon_min": 0.01, 
+    "epsilon_decay": 0.9993, 
+    "episodes": 10000,
     "hidden_nodes": 128,
     "test_ep_slippery": 2000
 }
-
 
 params_nonslippery = {
     "learning_rate": 0.002,
@@ -44,9 +29,6 @@ params_nonslippery = {
     "hidden_nodes": 128,
     "test_ep_nonslippery": 200
 }
-
-
-
 
 
 def get_config():

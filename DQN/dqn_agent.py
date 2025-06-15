@@ -4,6 +4,7 @@ import torch.nn.functional as F
 import random
 from collections import deque
 
+# Initialization of the DQN
 class DQN(nn.Module):
     def __init__(self, in_states, h1_nodes, out_actions):
         super().__init__()
@@ -17,6 +18,7 @@ class DQN(nn.Module):
         return self.out(x)
 
 
+# Memory management
 class ReplayMemory:
     def __init__(self, maxlen):
         self.memory = deque([], maxlen=maxlen)
@@ -30,8 +32,20 @@ class ReplayMemory:
     def __len__(self):
         return len(self.memory)
 
-def state_to_input(state, num_states):
-    return torch.FloatTensor([1 if i == state else 0 for i in range(num_states)])
+
+#def one_hot_encode(state, num_states):
+#    return torch.FloatTensor([1 if i == state else 0 for i in range(num_states)])
+
+def one_hot_encode(state, num_states):
+    input_vector = []
+    for i in range(num_states):
+        if i == state:
+            input_vector.append(1)
+        else:
+            input_vector.append(0)
+
+    return torch.FloatTensor(input_vector)
+
 
 def optimize(model, target_model, memory, optimizer, loss_fn, mini_batch_size, discount_factor, num_states):
     if len(memory) < mini_batch_size:
@@ -46,10 +60,10 @@ def optimize(model, target_model, memory, optimizer, loss_fn, mini_batch_size, d
             target = torch.FloatTensor([reward])
         else:
             with torch.no_grad():
-                target = reward + discount_factor * target_model(state_to_input(new_state, num_states)).max()
+                target = reward + discount_factor * target_model(one_hot_encode(new_state, num_states)).max()
 
-        current_q = model(state_to_input(state, num_states))
-        target_q = target_model(state_to_input(state, num_states))
+        current_q = model(one_hot_encode(state, num_states))
+        target_q = target_model(one_hot_encode(state, num_states))
         target_q[action] = target
 
         current_q_list.append(current_q)
