@@ -47,5 +47,5 @@ def test(env_name, is_slippery, model_path, episodes):
     plt.ylabel("Successes (last 100)")
     plt.legend()
     plt.grid(True)
-    plt.savefig(f"test_{env_name.split('-')[0].lower()}_{'slippery' if is_slippery else 'deterministic'}.png")
+    plt.savefig(f"double_test_{env_name.split('-')[0].lower()}_{'slippery' if is_slippery else 'deterministic'}.png")
     plt.close()

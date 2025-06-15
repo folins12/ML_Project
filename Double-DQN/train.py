@@ -101,7 +101,7 @@ def train(env_name, is_slippery, config):
     plt.xlabel("Episodes")
     plt.ylabel("Successes (last 100)")
     plt.grid(True)
-    plt.savefig(f"train_{config['map_name'].lower()}_{'slippery' if is_slippery else 'deterministic'}.png")
+    plt.savefig(f"double_train_{config['map_name'].lower()}_{'slippery' if is_slippery else 'deterministic'}.png")
     plt.close()
 
     # Plot Epsilon Decay
@@ -111,5 +111,5 @@ def train(env_name, is_slippery, config):
     plt.xlabel("Episodes")
     plt.ylabel("Epsilon")
     plt.grid(True)
-    plt.savefig(f"epsilon_decay_{config['map_name'].lower()}_{'slippery' if is_slippery else 'deterministic'}.png")
+    plt.savefig(f"doube_epsilon_decay_{config['map_name'].lower()}_{'slippery' if is_slippery else 'deterministic'}.png")
     plt.close()

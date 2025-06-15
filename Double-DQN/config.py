@@ -1,4 +1,4 @@
-USE_SLIPPERY = True  
+USE_SLIPPERY = False  
 
 MAP_NAME = '8x8'
 
