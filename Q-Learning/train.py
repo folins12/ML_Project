@@ -17,7 +17,6 @@ def train(map_name, is_slippery, episodes):
         epsilon_decay=AGENT_PARAMS["epsilon_decay"]
     )
     
-    #agent = QLearningAgent(env)
     rewards = []
     epsilons = []
 

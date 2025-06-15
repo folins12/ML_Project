@@ -1,4 +1,4 @@
-USE_SLIPPERY = True  
+USE_SLIPPERY = False  
 
 MAP_NAME = '8x8'
 
@@ -29,9 +29,6 @@ params_nonslippery = {
     "hidden_nodes": 128,
     "test_ep_nonslippery": 200
 }
-
-
-
 
 
 def get_config():

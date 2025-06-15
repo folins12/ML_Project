@@ -37,6 +37,8 @@ def plot_frozenlake_map(env, filename="frozenlake_map.png"):
     plt.savefig(filename)
     plt.close()
 
+
+
 # Plot Q Table
 def plot_q_table(env, q_table, map_name, is_slippery):
     desc = env.unwrapped.desc.astype(str)

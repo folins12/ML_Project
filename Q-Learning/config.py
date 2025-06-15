@@ -9,12 +9,12 @@ AGENT_PARAMS = {
     "gamma": 0.9,
     "epsilon": 1.0,
     "epsilon_min": 0.0,
-    "epsilon_decay": 0.00003    # Linear Decay          (0.00004 8x8 False)
+    "epsilon_decay": 0.00003    # Linear Decay
     #"epsilon_decay": 0.99995   # Exponential Decay
 }
 
 TRAINING_PARAMS = {
-    "episodes": 50000   # (40000 8x8 False)
+    "episodes": 50000
 }
 
 TESTING_PARAMS = {
