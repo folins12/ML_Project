@@ -46,31 +46,3 @@ def one_hot_encode(state, num_states):
 
     return torch.FloatTensor(input_vector)
 
-
-def optimize(model, target_model, memory, optimizer, loss_fn, mini_batch_size, discount_factor, num_states):
-    if len(memory) < mini_batch_size:
-        return
-
-    mini_batch = memory.sample(mini_batch_size)
-    current_q_list = []
-    target_q_list = []
-
-    for state, action, new_state, reward, terminated in mini_batch:
-        if terminated:
-            target = torch.FloatTensor([reward])
-        else:
-            with torch.no_grad():
-                target = reward + discount_factor * target_model(one_hot_encode(new_state, num_states)).max()
-
-        current_q = model(one_hot_encode(state, num_states))
-        target_q = target_model(one_hot_encode(state, num_states))
-        target_q[action] = target
-
-        current_q_list.append(current_q)
-        target_q_list.append(target_q)
-
-    loss_fn = nn.SmoothL1Loss()
-    loss = loss_fn(torch.stack(current_q_list), torch.stack(target_q_list))
-    optimizer.zero_grad()
-    loss.backward()
-    optimizer.step()
